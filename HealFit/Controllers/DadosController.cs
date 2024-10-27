@@ -56,7 +56,7 @@ public class DadosController : ControllerBase {
     [HttpGet("Usuario/{id:int}")]
     public async Task<ActionResult<DadosDTO>> GetUsuario(int id) {
 
-        var dados = await _uof.DadosRepository.GetAsync(u => u.DadosId == id);
+        var dados = await _uof.DadosRepository.GetAsync(u => u.UsuarioId == id);
 
         if (dados == null) {
 

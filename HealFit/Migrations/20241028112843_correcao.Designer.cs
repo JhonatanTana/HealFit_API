@@ -4,6 +4,7 @@ using HealFit.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HealFit.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241028112843_correcao")]
+    partial class correcao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,40 +33,40 @@ namespace HealFit.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ConsumoId"));
 
-                    b.Property<double>("AddedSugars")
+                    b.Property<decimal>("AddedSugars")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("Calcium")
+                    b.Property<decimal>("Calcium")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("Calories")
+                    b.Property<decimal>("Calories")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("Carbohydrate")
+                    b.Property<decimal>("Carbohydrate")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("Cholesterol")
+                    b.Property<decimal>("Cholesterol")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<double>("Fat")
+                    b.Property<decimal>("Fat")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("Fiber")
+                    b.Property<decimal>("Fiber")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("Iron")
+                    b.Property<decimal>("Iron")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<string>("MeasurementDescription")
                         .IsRequired()
@@ -80,38 +83,38 @@ namespace HealFit.Migrations
                         .HasMaxLength(8)
                         .HasColumnType("varchar(8)");
 
-                    b.Property<double>("MonounsaturatedFat")
+                    b.Property<decimal>("MonounsaturatedFat")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<string>("NumberOfUnits")
                         .IsRequired()
                         .HasMaxLength(8)
                         .HasColumnType("varchar(8)");
 
-                    b.Property<double>("PolyunsaturatedFat")
+                    b.Property<decimal>("PolyunsaturatedFat")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("Potassium")
+                    b.Property<decimal>("Potassium")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<string>("Produto")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<double>("Protein")
+                    b.Property<decimal>("Protein")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<double>("Quantidade")
                         .HasColumnType("double");
 
-                    b.Property<double>("SaturatedFat")
+                    b.Property<decimal>("SaturatedFat")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<string>("ServingDescription")
                         .IsRequired()
@@ -121,33 +124,33 @@ namespace HealFit.Migrations
                     b.Property<int>("ServingId")
                         .HasColumnType("int");
 
-                    b.Property<double>("Sodium")
+                    b.Property<decimal>("Sodium")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("Sugar")
+                    b.Property<decimal>("Sugar")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("TransFat")
+                    b.Property<decimal>("TransFat")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<int>("UsuarioId")
                         .HasMaxLength(8)
                         .HasColumnType("int");
 
-                    b.Property<double>("VitaminA")
+                    b.Property<decimal>("VitaminA")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("VitaminC")
+                    b.Property<decimal>("VitaminC")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
-                    b.Property<double>("VitaminD")
+                    b.Property<decimal>("VitaminD")
                         .HasMaxLength(8)
-                        .HasColumnType("double");
+                        .HasColumnType("decimal(65,30)");
 
                     b.HasKey("ConsumoId");
 

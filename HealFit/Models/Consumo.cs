@@ -22,43 +22,43 @@ public class Consumo {
     [StringLength(50)]
     public string MeasurementDescription { get; set; }
     [StringLength(8)]
-    public string? Calories { get; set; }
+    public double Calories { get; set; }
     [StringLength(8)]
-    public string? Carbohydrate { get; set; }
+    public double Carbohydrate { get; set; }
     [StringLength(8)]
-    public string? Protein { get; set; }
+    public double Protein { get; set; }
     [StringLength(8)]
-    public string? Fat { get; set; }
+    public double Fat { get; set; }
     [StringLength(8)]
-    public string? SaturatedFat { get; set; }
+    public double SaturatedFat { get; set; }
     [StringLength(8)]
-    public string? PolyunsaturatedFat { get; set; }
+    public double PolyunsaturatedFat { get; set; }
     [StringLength(8)]
-    public string? MonounsaturatedFat { get; set; }
+    public double MonounsaturatedFat { get; set; }
     [StringLength(8)]
-    public string? Cholesterol { get; set; }
+    public double Cholesterol { get; set; }
     [StringLength(8)]
-    public string? Sodium { get; set; }
+    public double Sodium { get; set; }
     [StringLength(8)]
-    public string? Potassium { get; set; }
+    public double Potassium { get; set; }
     [StringLength(8)]
-    public string? Fiber { get; set; }
+    public double Fiber { get; set; }
     [StringLength(8)]
-    public string? Sugar { get; set; }
+    public double Sugar { get; set; }
     [StringLength(8)]
-    public string? VitaminA { get; set; }
+    public double VitaminA { get; set; }
     [StringLength(8)]
-    public string? VitaminC { get; set; }
+    public double VitaminC { get; set; }
     [StringLength(8)]
-    public string? Calcium { get; set; }
+    public double Calcium { get; set; }
     [StringLength(8)]
-    public string? Iron { get; set; }
+    public double Iron { get; set; }
     [StringLength(8)]
-    public string? TransFat { get; set; }
+    public double TransFat { get; set; }
     [StringLength(8)]
-    public string? AddedSugars { get; set; }
+    public double AddedSugars { get; set; }
     [StringLength(8)]
-    public string? VitaminD { get; set; }
+    public double VitaminD { get; set; }
     [StringLength(8)]
     public int UsuarioId { get; set; }
 }

@@ -12,24 +12,24 @@ public class ConsumoDTO {
     public string MetricServingUnit { get; set; }
     public string NumberOfUnits { get; set; }
     public string MeasurementDescription { get; set; }
-    public string? Calories { get; set; }
-    public string? Carbohydrate { get; set; }
-    public string? Protein { get; set; }
-    public string? Fat { get; set; }
-    public string? SaturatedFat { get; set; }
-    public string? PolyunsaturatedFat { get; set; }
-    public string? MonounsaturatedFat { get; set; }
-    public string? Cholesterol { get; set; }
-    public string? Sodium { get; set; }
-    public string? Potassium { get; set; }
-    public string? Fiber { get; set; }
-    public string? Sugar { get; set; }
-    public string? VitaminA { get; set; }
-    public string? VitaminC { get; set; }
-    public string? Calcium { get; set; }
-    public string? Iron { get; set; }
-    public string? TransFat { get; set; }
-    public string? AddedSugars { get; set; }
-    public string? VitaminD { get; set; }
+    public double Calories { get; set; }
+    public double Carbohydrate { get; set; }
+    public double Protein { get; set; }
+    public double Fat { get; set; }
+    public double SaturatedFat { get; set; }
+    public double PolyunsaturatedFat { get; set; }
+    public double MonounsaturatedFat { get; set; }
+    public double Cholesterol { get; set; }
+    public double Sodium { get; set; }
+    public double Potassium { get; set; }
+    public double Fiber { get; set; }
+    public double Sugar { get; set; }
+    public double VitaminA { get; set; }
+    public double VitaminC { get; set; }
+    public double Calcium { get; set; }
+    public double Iron { get; set; }
+    public double TransFat { get; set; }
+    public double AddedSugars { get; set; }
+    public double VitaminD { get; set; }
     public int UsuarioId { get; set; }
 }

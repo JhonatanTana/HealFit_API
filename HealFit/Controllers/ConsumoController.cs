@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HealFit.DTO;
+using HealFit.DTO.Response;
 using HealFit.Models;
 using HealFit.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -126,5 +127,15 @@ public class ConsumoController : ControllerBase {
         await _uof.CommitAsync();
 
         return Ok();
+    }
+
+    [HttpGet("Total/Diario")]
+    public async Task<ActionResult<ConsumoDTOResponse>> GetTotalConsumo(int id, DateTime dataInicio, DateTime dataFinal) {
+
+        var consumo = await _uof.ConsumoRepository.ConsultaTotalConsumo(id, dataInicio, dataFinal);
+
+        var resultado = _mapper.Map<ConsumoDTOResponse>(consumo);
+
+        return Ok(resultado);
     }
 }
